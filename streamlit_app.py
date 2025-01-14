@@ -1,3 +1,4 @@
+import requests
 import nltk
 import os
 import tempfile
