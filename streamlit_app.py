@@ -137,8 +137,12 @@ if enter_button:
             chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
             result = chain({"question":query}, return_only_outputs=True)
 
+            st.write(f"Result type: {type(result)}")
+            st.write(f"Result: {result}")
             # Extract the answer as a string from the OpenAIObject
             answer = result.get("answer", "")
+
+            
             
             st.header("Answer")
             st.write(answer)
