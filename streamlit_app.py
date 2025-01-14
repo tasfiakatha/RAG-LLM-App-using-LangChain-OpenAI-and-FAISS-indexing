@@ -25,6 +25,12 @@ os.environ["UNSTRUCTURED_API_URL"] = st.secrets["UNSTRUCTURED_API_URL"]
 # Optionally, print the environment variables to verify (remove in production)
 st.write("Unstructured API Key:", os.getenv("UNSTRUCTURED_API_KEY"))
 st.write("Unstructured API URL:", os.getenv("UNSTRUCTURED_API_URL"))
+try:
+    # Test API call
+    response = some_unstructured_api_call()
+    st.write(response)
+except Exception as e:
+    st.error(f"Error: {e}")
 
 # Web interface
 st.title("Research Query Tool")
