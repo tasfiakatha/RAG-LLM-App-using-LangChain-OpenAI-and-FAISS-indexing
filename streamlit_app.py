@@ -134,11 +134,15 @@ if enter_button:
         if 'vectorstore' in st.session_state:
             vectorstore = st.session_state['vectorstore']
 
+            # Initialize chat_history as an empty list or use previous conversation history
+            chat_history = []
+
+
             # Create the Conversational Retrieval Chain
             conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
             
             # Query the chain
-            result = conversation_chain({"question": query})
+            result = conversation_chain({"question": query, "chat_history": chat_history})
             
             # Display the answer
             st.header("Answer")
