@@ -133,28 +133,17 @@ if enter_button:
         if 'vectorstore' in st.session_state:
             vectorstore = st.session_state['vectorstore']
 
-            # Create retrieval QA chain
-            chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
-            result = chain({"question":query}, return_only_outputs=True)
-
-            st.write(f"Result type: {type(result)}")
-            st.write(f"Result: {result}")
-            # Extract the answer as a string from the OpenAIObject
-            answer = result.get("answer", "")
-
+            # Create the Conversational Retrieval Chain
+            conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
             
+            # Query the chain
+            result = conversation_chain({"question": query})
             
+            # Display the answer
             st.header("Answer")
-            st.write(answer)
-        
+            st.write(result["answer"])
 
-            # Display sources
-            sources = result.get("sources", "")
-            if sources:
-                st.subheader("Sources:")
-                sources_list = sources.split("\n")
-                for source in sources_list:
-                    st.write(source)
+            
 
         else: 
             st.error("FAISS index not found. Please process data first")
