@@ -15,6 +15,7 @@ from langchain.document_loaders import UnstructuredURLLoader, UnstructuredFileLo
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS 
 from langchain.schema import Document 
+from langchain.chat_models import ChatOpenAI 
 
 
 # Get all environment variables
@@ -44,7 +45,7 @@ main_placefolder = st.empty()
 
 
 # Initialize llm 
-llm = OpenAI(temperature=0.6, max_tokens=500, model="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0.6, max_tokens=500, model="gpt-3.5-turbo")
 
 if process_url_clicked:
     # load data from URLs
