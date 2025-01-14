@@ -44,7 +44,7 @@ main_placefolder = st.empty()
 
 
 # Initialize llm 
-llm = OpenAI(temperature=0.6, max_tokens=500)
+llm = ChatOpenAI(temperature=0.6, max_tokens=500, model="gpt-3.5-turbo")
 
 if process_url_clicked:
     # load data from URLs
