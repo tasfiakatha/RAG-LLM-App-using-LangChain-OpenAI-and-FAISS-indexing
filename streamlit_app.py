@@ -22,8 +22,7 @@ from langchain.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-os.environ["UNSTRUCTURED_API_KEY"] = st.secrets["UNSTRUCTURED_API_KEY"]
-os.environ["UNSTRUCTURED_API_URL"] = st.secrets["UNSTRUCTURED_API_URL"]
+
 
 # Web interface
 st.title("Research Query Tool")
