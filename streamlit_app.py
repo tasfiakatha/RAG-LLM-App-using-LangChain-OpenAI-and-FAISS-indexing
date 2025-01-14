@@ -25,12 +25,25 @@ os.environ["UNSTRUCTURED_API_URL"] = st.secrets["UNSTRUCTURED_API_URL"]
 # Optionally, print the environment variables to verify (remove in production)
 st.write("Unstructured API Key:", os.getenv("UNSTRUCTURED_API_KEY"))
 st.write("Unstructured API URL:", os.getenv("UNSTRUCTURED_API_URL"))
+# Define the headers for API authentication
+headers = {
+    "Authorization": f"Bearer {os.getenv('UNSTRUCTURED_API_KEY')}"
+}
+
+# Define a test endpoint for Unstructured API (update based on their documentation)
+test_endpoint = os.getenv("UNSTRUCTURED_API_URL")
+
 try:
-    # Test API call
-    response = some_unstructured_api_call()
-    st.write(response)
+    # Make a GET request to test connectivity
+    response = requests.get(test_endpoint, headers=headers)
+    
+    # Check the response status code
+    if response.status_code == 200:
+        st.write("Connection successful! Response:", response.json())
+    else:
+        st.error(f"Failed to connect! Status code: {response.status_code}, Message: {response.text}")
 except Exception as e:
-    st.error(f"Error: {e}")
+    st.error(f"Error connecting to Unstructured API: {e}")
 
 # Web interface
 st.title("Research Query Tool")
