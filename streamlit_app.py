@@ -148,6 +148,16 @@ if enter_button:
             st.header("Answer")
             st.write(result["answer"])
 
+            # Display sources if any
+            if "sources" in result:
+                sources = result["sources"]
+                st.subheader("Sources:")
+                st.write(sources)
+
+            # Update chat_history with the new query and answer
+            chat_history.append(("User", query))
+            chat_history.append(("Bot", result["answer"]))
+
             
 
         else: 
