@@ -100,7 +100,13 @@ if process_url_clicked:
         st.write(f"Loaded {len(data)} document(s)")
     
     # Convert each dictionary into a Document object
-    data = [Document(page_content=doc['content'], metadata={"url": doc['url']}) for doc in data]
+    data = [
+        Document(
+            page_content=doc['content'], 
+            metadata={"url": doc['url']} if "url" in doc else {"file_name":doc['file_name']}
+        ) 
+        for doc in data
+    ]
 
     # split data
     text_splitter = RecursiveCharacterTextSplitter(
