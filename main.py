@@ -1,3 +1,26 @@
+"""
+This script demonstrate how to deploy and serve RAG based chatbot using Streamlit.
+
+In this setup, we’ll deploy a local server that will host a Streamlit-based GUI
+(Graphical User Interface). This GUI will allow users to interact directly with
+the Language Model (LLM) through an intuitive, user-friendly interface.
+
+The local system will work as a server that provides real-time responses to the
+user's inputs in the GUI.
+
+Requirements
+------------
+Install requirements.txt from command prompt: pip install -r requirements.txt
+
+To run the app on local host:
+---------------
+Run in command prompt:
+streamlit run main.py
+
+"""
+
+
+
 import nltk
 import os
 import tempfile
