@@ -90,8 +90,7 @@ if process_url_clicked:
                 except Exception as e:
                     st.error(f"Error processing file {uploaded_file.name}. \nError: {e}")
 
-    else:
-        st.warning(f"No files selected for upload")
+    
 
     # check if data was loaded properly
     if not data:
