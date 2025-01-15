@@ -146,10 +146,9 @@ if process_url_clicked:
     vectorstore_openai = FAISS.from_documents(docs, embeddings)
     st.session_state['vectorstore'] = vectorstore_openai
     main_placefolder.text("Creating embedding vector. . . . 📚")
-    time.sleep(1)
+    time.sleep(2)
 
-    # Reset trigger
-    process_url_clicked = False
+    
 
 # Question box and submit button
 with st.form("query_form"):
