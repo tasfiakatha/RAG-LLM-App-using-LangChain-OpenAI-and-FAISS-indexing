@@ -1,3 +1,10 @@
+"""
+View app with the following link:
+https://datascoutai.streamlit.app/
+
+"""
+
+
 import nltk
 import requests
 import os
