@@ -148,6 +148,9 @@ if process_url_clicked:
     main_placefolder.text("Creating embedding vector. . . . 📚")
     time.sleep(2)
 
+    # Reset trigger
+    process_url_clicked = False
+
 # Question box and submit button
 with st.form("query_form"):
     query = st.text_input("What do you want to know?", "")
