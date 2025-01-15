@@ -146,6 +146,7 @@ if process_url_clicked:
     vectorstore_openai = FAISS.from_documents(docs, embeddings)
     st.session_state['vectorstore'] = vectorstore_openai
     main_placefolder.text("Creating embedding vector. . . . 📚")
+    main_placefolder.text("Successfully created embedding vector 📚")
     time.sleep(2)
 
     
