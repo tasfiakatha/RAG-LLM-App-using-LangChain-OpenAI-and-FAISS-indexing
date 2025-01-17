@@ -17,7 +17,7 @@ DataScout AI simplifies the data retrieval process by allowing users to query mu
 **1. Setting Up the Environment:**
 
 - The code begins by importing necessary libraries like nltk, requests, streamlit, and openai, among others.
-- Environment variables are loaded using the dotenv package, which includes the OpenAI API key for accessing OpenAI's models.
+- Environment variables are loaded using the dotenv package, which includes the OpenAI API key for accessing OpenAI's models.  
 
 
 **2. Fetching and Processing Data:**
