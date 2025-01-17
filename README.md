@@ -17,9 +17,9 @@ DataScout AI simplifies the data retrieval process by allowing users to query mu
 **1. Setting Up the Environment:**
 
 - The code begins by importing necessary libraries like nltk, requests, streamlit, and openai, among others.
-- Environment variables are loaded using the dotenv package, which includes the OpenAI API key for accessing OpenAI's models.  
+- Environment variables are loaded using the dotenv package, which includes the OpenAI API key for accessing OpenAI's models.
 
-
+  
 **2. Fetching and Processing Data:**
 
 When the "Get content" button is clicked, the app starts retrieving data:
@@ -104,21 +104,21 @@ A button to trigger the data processing from the provided sources.
 
 URLs: Enter up to 3 URLs in the sidebar.
 
-File Upload: Upload .txt, .pdf, or .docx files from your computer.
+File Upload: Upload .txt, .pdf, or .docx files from your computer.                            
 
 
 **2. Process Data**
 
 Click the "Get content" button to start processing.
 
-Monitor the progress and view any errors or warnings in real-time.
+Monitor the progress and view any errors or warnings in real-time.                                                         
 
 
 **3. Ask Questions**
 
 Once the data is processed, enter a question in the query box.
 
-Click "Enter" to retrieve the answer from the data.
+Click "Enter" to retrieve the answer from the data.                      
 
 
 ## Project Structure
