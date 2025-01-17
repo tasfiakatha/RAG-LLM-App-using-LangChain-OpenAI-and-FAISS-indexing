@@ -59,37 +59,34 @@ A button to trigger the data processing from the provided sources.
 
 ### Prerequisites
 
-Python 3.8+
+- Python 3.8+
 
-Streamlit
+- Streamlit
 
-OpenAI API key
+- OpenAI API key
 
 ### Steps
 
-Clone the repository:
+1. Clone the repository:
 
-git clone https://github.com/your-username/datascout-ai.git
+![image](https://github.com/user-attachments/assets/648802bf-82be-4e43-8219-80c7fe07c650)
 
-Navigate to the project directory:
 
-cd datascout-ai
-
-Install the required dependencies:
+2. Install the required dependencies:
 
 pip install -r requirements.txt
 
-Set up your OpenAI API key:
+3. Set up your OpenAI API key:
 
 Create a .env file in the root directory.
 
-Add the following line to the file:
+![image](https://github.com/user-attachments/assets/505131ed-471e-4041-9e50-c36c26c4294d)
 
-OPENAI_API_KEY=your_api_key_here
 
-Run the application:
+4. Run the application:
 
-streamlit run app.py
+![image](https://github.com/user-attachments/assets/27451a44-f731-413c-96f3-fb5370a7d30b)
+
 
 Open the local development URL provided by Streamlit in your browser.
 
@@ -116,26 +113,22 @@ Click "Enter" to retrieve the answer from the data.
 
 
 ## Project Structure
+![image](https://github.com/user-attachments/assets/da5d2956-3d02-46d3-b84e-a74f8f77755a)
 
-project-folder/
-|— streamlit_app.py        # Deployed Streamlit application script
-|— requirements.txt        # Python dependencies
-|— README.md               # Project documentation
-|— main.py                 # Main application script
 
 ## Technologies Used
-Retrieval Augmented Generation (RAG): Framework that combines large language models (LLMs) with information retrieval systems. RAG improves the quality of responses by giving LLMs access to information outside of their training data
+1. Retrieval Augmented Generation (RAG): Framework that combines large language models (LLMs) with information retrieval systems. RAG improves the quality of responses by giving LLMs access to information outside of their training data
 
-OpenAI GPT-3.5-turbo: Language model for conversational responses.
+2. OpenAI GPT-3.5-turbo: Language model for conversational responses.
 
-LangChain: Framework for building retrieval-based conversational AI.
+3. LangChain: Framework for building retrieval-based conversational AI.
 
-FAISS: Efficient similarity search for embedding-based retrieval.
+4. FAISS: Efficient similarity search for embedding-based retrieval.
 
-Streamlit: Web interface for user interaction.
+5. Streamlit: Web interface for user interaction.
 
 ## Limitations
-File Size: Large files may impact performance during text extraction and embedding creation.
+File Size: Large files may impact performance during text extraction and embedding creation.  
 Scanned PDFs: Does not support text extraction from scanned documents.
 
 ## Contribution
